@@ -35,8 +35,9 @@ def custom_score(game, player):
         The heuristic value of the current game state to the specified player.
     """
     # TODO: finish this function!
-    raise NotImplementedError
-
+    # raise NotImplementedError
+    opponent = game.get_opponent(player)
+    return float(len(game.get_legal_moves(player)) - len(game.get_legal_moves(opponent)))
 
 def custom_score_2(game, player):
     """Calculate the heuristic value of a game state from the point of view
@@ -209,11 +210,59 @@ class MinimaxPlayer(IsolationPlayer):
                 each helper function or else your agent will timeout during
                 testing.
         """
+        best_move = (-1, -1)
         if self.time_left() < self.TIMER_THRESHOLD:
-            raise SearchTimeout()
+            return best_move
+
 
         # TODO: finish this function!
-        raise NotImplementedError
+        # raise NotImplementedError
+
+        opponent = game.get_opponent(game.active_player)
+
+        possible_moves = game.get_legal_moves()
+        print('Possible Moves at depth ({}):'.format(depth))
+        print(possible_moves)
+
+        possible_scores = [self.score(game.forecast_move(move), game.active_player) for move in possible_moves]
+        print('Possible Scores:')
+        print(possible_scores)
+
+        #
+        best_move_idx = possible_scores.index(max(possible_scores))
+        best_move = possible_moves[best_move_idx]
+        print('Best Move:')
+        print(best_move)
+
+        if depth > 0 and self.time_left() > self.TIMER_THRESHOLD:
+            print("depth is still {}. Going down...".format(depth))
+            for move in possible_moves:
+                print('Now in move: {}'.format(move))
+                forecasted_game = game.forecast_move(move)
+
+                possible_opponent_moves = forecasted_game.get_legal_moves(opponent)
+
+                print('Opponent Possibilities to move {}:'.format(move))
+
+                possible_opponent_scores = [self.score(forecasted_game.forecast_move(move), game.active_player)
+                    for move in possible_opponent_moves]
+
+                print(possible_opponent_moves)
+                print('Possible opponent scores:')
+                print(possible_opponent_scores)
+
+                best_opponent_move_idx = possible_opponent_scores.index(min(possible_opponent_scores))
+                best_opponent_move = possible_opponent_moves[best_opponent_move_idx]
+
+                print('Opponent Chooses:')
+                print(best_opponent_move)
+
+                f_game = forecasted_game.forecast_move(best_opponent_move)
+                self.minimax(f_game, depth-1)
+        else:
+            return best_move
+
+
 
 
 class AlphaBetaPlayer(IsolationPlayer):
