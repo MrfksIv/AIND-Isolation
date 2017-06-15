@@ -119,6 +119,8 @@ class IsolationPlayer:
         self.time_left = None
         self.TIMER_THRESHOLD = timeout
 
+        self.move_index = 0
+
 
 class MinimaxPlayer(IsolationPlayer):
     """Game-playing agent that chooses a move using depth-limited minimax
@@ -210,57 +212,106 @@ class MinimaxPlayer(IsolationPlayer):
                 each helper function or else your agent will timeout during
                 testing.
         """
+        self.move_index += 1
+        opponent = game.get_opponent(game.active_player)
+        # print("==== BEGIN  FN CALL=====")
+        # print("player 1 at: {} || player 2 at: {}"
+        #         .format(game.get_player_location(opponent),game.get_player_location(game.active_player)))
+        # print("MOVE ({})".format(self.move_index))
+        # print("====---------------=====") 
+        
         best_move = (-1, -1)
         if self.time_left() < self.TIMER_THRESHOLD:
+            # print("out of time... Available best move: {}".format(best_move))
             return best_move
 
-
-        # TODO: finish this function!
-        # raise NotImplementedError
-
-        opponent = game.get_opponent(game.active_player)
+        # print("minimax called by {}".format(game.active_player))
 
         possible_moves = game.get_legal_moves()
-        print('Possible Moves at depth ({}):'.format(depth))
-        print(possible_moves)
+        if len(possible_moves) == 0:
+            # print("No moves left!")
+            return best_move
+
+        # print('Possible Moves at depth ({}):'.format(depth))
+        # print(possible_moves)
 
         possible_scores = [self.score(game.forecast_move(move), game.active_player) for move in possible_moves]
-        print('Possible Scores:')
-        print(possible_scores)
+        # print('Possible Scores:')
+        # print(possible_scores)
 
         #
         best_move_idx = possible_scores.index(max(possible_scores))
         best_move = possible_moves[best_move_idx]
-        print('Best Move:')
-        print(best_move)
+        # print('Best Move:')
+        # print(best_move)
 
-        if depth > 0 and self.time_left() > self.TIMER_THRESHOLD:
-            print("depth is still {}. Going down...".format(depth))
+        if depth >= 0 :
             for move in possible_moves:
-                print('Now in move: {}'.format(move))
+            
+                # print('Now in move: {}'.format(move))
                 forecasted_game = game.forecast_move(move)
-
+                
+                # print("player 1 at: {} || player 2 at: {}"
+                #     .format(forecasted_game.get_player_location(opponent),forecasted_game.get_player_location(game.active_player)))
+                
                 possible_opponent_moves = forecasted_game.get_legal_moves(opponent)
 
-                print('Opponent Possibilities to move {}:'.format(move))
+                for opponent_move in possible_opponent_moves: 
+                    forecasted_game_2 = forecasted_game.forecast_move(opponent_move)
 
-                possible_opponent_scores = [self.score(forecasted_game.forecast_move(move), game.active_player)
-                    for move in possible_opponent_moves]
+                if len(possible_opponent_moves) == 0:
+                    # print("opponent ran out of moves!!")
+                    return move
 
-                print(possible_opponent_moves)
-                print('Possible opponent scores:')
-                print(possible_opponent_scores)
+                # print('Opponent Possibilities to move:')
+                # print(possible_opponent_moves)
+                if self.time_left() > self.TIMER_THRESHOLD:
+                    possible_opponent_scores = [self.score(forecasted_game.forecast_move(move), game.active_player)
+                        for move in possible_opponent_moves]
 
-                best_opponent_move_idx = possible_opponent_scores.index(min(possible_opponent_scores))
-                best_opponent_move = possible_opponent_moves[best_opponent_move_idx]
 
-                print('Opponent Chooses:')
-                print(best_opponent_move)
 
-                f_game = forecasted_game.forecast_move(best_opponent_move)
-                self.minimax(f_game, depth-1)
-        else:
-            return best_move
+                    # print(possible_opponent_moves)
+                    # print('Possible opponent scores:')
+                    # print(possible_opponent_scores)
+
+                    best_opponent_move_idx = possible_opponent_scores.index(min(possible_opponent_scores))
+                    best_opponent_move = possible_opponent_moves[best_opponent_move_idx]
+
+                    # print('Opponent Chooses:')
+                    # print(best_opponent_move)
+
+                    f_game = forecasted_game.forecast_move(best_opponent_move)
+                    self.minimax(f_game, depth-1)
+
+                else:
+                    return best_move
+            
+        return best_move
+
+
+    def _minimax_max(self, game):
+        legal_moves = game.get_legal_moves()
+
+        if len(legal_moves) == 0:
+            return game.utility()
+
+        for move in legal_moves:
+            f_game = game.forecast_move(move)
+            self._minimax_min(f_game)
+
+
+    def _minimax_min(self, game):
+        legal_moves = game.get_legal_moves()
+
+        if len(legal_moves) == 0:
+            return game.utility()
+
+        for move in legal_moves:
+            f_game = game.forecast_move(move)
+            self._minimax_min(f_game)
+
+
 
 
 
@@ -304,7 +355,7 @@ class AlphaBetaPlayer(IsolationPlayer):
         self.time_left = time_left
 
         # TODO: finish this function!
-        raise NotImplementedError
+        return game.get_legal_moves()
 
     def alphabeta(self, game, depth, alpha=float("-inf"), beta=float("inf")):
         """Implement depth-limited minimax search with alpha-beta pruning as
