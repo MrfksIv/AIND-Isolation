@@ -286,6 +286,9 @@ if __name__ == "__main__":
     # play the remainder of the game automatically -- outcome can be "illegal
     # move", "timeout", or "forfeit"
     winner, history, outcome = game.play()
+
+
     print("\nWinner: {}\nOutcome: {}".format(winner, outcome))
     print(game.to_string())
     print("Move history:\n{!s}".format(history))
+    print("My player won: {}".format(game.is_winner(player2)))

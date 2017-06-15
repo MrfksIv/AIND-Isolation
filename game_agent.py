@@ -542,8 +542,8 @@ class AlphaBetaPlayer(IsolationPlayer):
             game.active_player, game.get_player_location(game.active_player),legal_moves ))
 
         if len(legal_moves) == 0:
-            print("{} has no more moves".format(game.active_player))
-            return game.utility(game.active_player)
+            print("{} has no more moves Utility is:{}".format(player, game.utility(player)))
+            return game.utility(player)
 
         for move in legal_moves:
             forecasted_game = game.forecast_move(move)

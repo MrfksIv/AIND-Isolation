@@ -7,7 +7,7 @@
 5  |   |   |   |   |   |   |   | 
 6  |   |   |   |   |   |   |   | 
 
-[(1, 5), (1, 1), (4, 4), (0, 2), (3, 5), (3, 1), (4, 2), (0, 4)]
+[(0, 4), (1, 1), (3, 5), (4, 2), (4, 4), (0, 2), (1, 5), (3, 1)]
 
 Old state:
      0   1   2   3   4   5   6
@@ -31,1058 +31,2098 @@ New state:
 6  |   |   |   |   |   |   |   | 
 
 ==== BEGIN  FN CALL=====
-player 1 at: (4, 4) || player 2 at: (0, 5)
+player 1 at: (0, 2) || player 2 at: (0, 5)
 MOVE (1)
 ====---------------=====
-Player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> moves: [(2, 4), (1, 3), (2, 6)]
-player 1 at: (4, 4) || player 2 at: (2, 4)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (4, 4): [(6, 3), (5, 2), (6, 5), (3, 6), (5, 6), (3, 2), (2, 5)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (2, 4): [(4, 5), (3, 6), (4, 3), (1, 6), (1, 2), (0, 3), (3, 2)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(2, 6), (1, 3), (2, 4)]
+player 1 at: (0, 2) || player 2 at: (2, 6)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (0, 2): [(2, 1), (1, 0), (1, 4)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 6): [(3, 4), (1, 4), (4, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 2.0
 alpha:-inf, best_util: 2.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 -1.0
-alpha:-inf, best_util: 2.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-4.0
-alpha:-inf, best_util: 4.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:-inf, best_util: 4.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-2.0
-alpha:-inf, best_util: 4.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:2.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 0.0
-alpha:-inf, best_util: 4.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:2.0, best_util: 2.0
+beta:inf, best_util: 2.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 6): [(4, 5), (3, 4), (1, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 3.0
-alpha:-inf, best_util: 4.0
-pruning rest of moves...: [(5, 2), (6, 5), (3, 6), (5, 6), (3, 2), (2, 5)]
-new_util: 4.0 current best:-inf
+pruning rest of moves...:[(3, 4), (1, 4)]
+beta:2.0, best_util: 2.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 6): [(4, 5), (3, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:-inf, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+pruning rest of moves...:[]
+beta:2.0, best_util: 2.0
+new_util: 2.0 current best:-inf
 new best...
-player 1 at: (4, 4) || player 2 at: (1, 3)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (4, 4): [(5, 6), (6, 5), (2, 5), (5, 2), (6, 3), (3, 2), (3, 6)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (1, 3): [(3, 2), (0, 1), (3, 4), (2, 1), (2, 5)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+player 1 at: (0, 2) || player 2 at: (1, 3)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (0, 2): [(2, 1), (1, 0), (1, 4)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (1, 3): [(3, 2), (3, 4), (2, 5), (0, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-4.0
-alpha:4.0, best_util: 4.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+3.0
+alpha:2.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:4.0, best_util: 4.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+3.0
+alpha:3.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:3.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:3.0, best_util: 3.0
+beta:inf, best_util: 3.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (1, 3): [(2, 1), (3, 2), (2, 5), (3, 4), (0, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:2.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 5.0
-alpha:4.0, best_util: 5.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+pruning rest of moves...:[(2, 5), (3, 4), (0, 1)]
+beta:3.0, best_util: 3.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (1, 3): [(2, 1), (3, 4), (3, 2), (0, 1), (2, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:4.0, best_util: 5.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+-1.0
+alpha:2.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 2.0
-alpha:4.0, best_util: 5.0
-pruning rest of moves...: [(6, 5), (2, 5), (5, 2), (6, 3), (3, 2), (3, 6)]
-new_util: 5.0 current best:4.0
-new best...
-player 1 at: (4, 4) || player 2 at: (2, 6)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (4, 4): [(6, 3), (3, 6), (2, 5), (6, 5), (5, 6), (3, 2), (5, 2)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (2, 6): [(4, 5), (3, 4), (1, 4)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:2.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 2.0
-alpha:5.0, best_util: 2.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:2.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-4.0
-alpha:5.0, best_util: 4.0
+-3.0
+alpha:2.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:2.0, best_util: 2.0
+pruning rest of moves...: []
+new_util: 2.0 current best:2.0
+player 1 at: (0, 2) || player 2 at: (2, 4)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (0, 2): [(2, 1), (1, 4), (1, 0)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 4): [(3, 6), (0, 3), (1, 2), (1, 6), (4, 5), (3, 2), (4, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:2.0, best_util: -2.0
 alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:2.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:2.0, best_util: 0.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:2.0, best_util: 0.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:2.0, best_util: 0.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 2.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(3, 6), (2, 5), (6, 5), (5, 6), (3, 2), (5, 2)]
-new_util: 4.0 current best:5.0
-best move is: (2, 6)
+alpha:2.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:2.0, best_util: 2.0
+pruning rest of moves...: [(1, 4), (1, 0)]
+new_util: 2.0 current best:2.0
+best move is: (2, 4)
 = = = =  = = = = = = = = = = = = = = = = = =
 ==== BEGIN  FN CALL=====
-player 1 at: (6, 3) || player 2 at: (1, 3)
+player 1 at: (1, 4) || player 2 at: (2, 6)
 MOVE (2)
 ====---------------=====
-Player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> moves: [(3, 4), (3, 2), (0, 1), (2, 5), (2, 1)]
-player 1 at: (6, 3) || player 2 at: (3, 4)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (6, 3): [(5, 5), (4, 2), (5, 1)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (3, 4): [(2, 6), (5, 3), (2, 2), (4, 6), (4, 2), (1, 5)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(4, 5), (3, 4)]
+player 1 at: (1, 4) || player 2 at: (4, 5)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (1, 4): [(0, 6), (3, 5), (2, 2), (3, 3)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 5): [(6, 6), (2, 4), (5, 3), (3, 3), (6, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:-inf, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+5.0
+alpha:0.0, best_util: 5.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+4.0
+alpha:5.0, best_util: 5.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 5.0
 alpha:5.0, best_util: 5.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 5.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:5.0, best_util: 5.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 5.0
-pruning rest of moves...: [(4, 2), (5, 1)]
-new_util: 5.0 current best:-inf
-new best...
-player 1 at: (6, 3) || player 2 at: (3, 2)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (6, 3): [(4, 2), (5, 5), (5, 1)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (3, 2): [(5, 3), (5, 1), (1, 1), (2, 0), (4, 0), (2, 4)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: -1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--4.0
-alpha:5.0, best_util: -1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--4.0
-alpha:5.0, best_util: -1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--3.0
-alpha:5.0, best_util: -1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--3.0
-alpha:5.0, best_util: -1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(5, 5), (5, 1)]
-new_util: 0.0 current best:5.0
-player 1 at: (6, 3) || player 2 at: (0, 1)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (6, 3): [(4, 2), (5, 5), (5, 1)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (0, 1): [(2, 0), (2, 2)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--3.0
-alpha:5.0, best_util: -3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(5, 5), (5, 1)]
-new_util: 1.0 current best:5.0
-player 1 at: (6, 3) || player 2 at: (2, 5)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (6, 3): [(5, 5), (4, 2), (5, 1)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (2, 5): [(4, 6), (0, 4), (3, 3), (0, 6)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-4.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--2.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(4, 2), (5, 1)]
-new_util: 4.0 current best:5.0
-player 1 at: (6, 3) || player 2 at: (2, 1)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (6, 3): [(4, 2), (5, 5), (5, 1)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (2, 1): [(4, 0), (0, 0), (0, 2), (3, 3)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--2.0
-alpha:5.0, best_util: -2.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--4.0
-alpha:5.0, best_util: -2.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--3.0
-alpha:5.0, best_util: -2.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 2.0
-alpha:5.0, best_util: 2.0
+alpha:5.0, best_util: 5.0
+beta:inf, best_util: 5.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 5): [(3, 3), (5, 3), (6, 4), (2, 4), (6, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:-inf, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:2.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:2.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:2.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:2.0, best_util: 2.0
+beta:5.0, best_util: 2.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 5): [(6, 6), (2, 4), (5, 3), (6, 4), (3, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-6.0
+alpha:-inf, best_util: -6.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:-6.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:-1.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:-1.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:-1.0, best_util: -1.0
+beta:2.0, best_util: -1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 5): [(6, 6), (2, 4), (5, 3), (6, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-5.0
+alpha:-inf, best_util: -5.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+pruning rest of moves...:[(5, 3), (6, 4)]
+beta:-1.0, best_util: -1.0
+new_util: -1.0 current best:-inf
+new best...
+player 1 at: (1, 4) || player 2 at: (3, 4)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (1, 4): [(2, 2), (3, 5), (3, 3), (0, 6)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 4): [(1, 5), (4, 6), (5, 5), (4, 2), (5, 3), (1, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:-1.0, best_util: -4.0
 alpha is smaller, updating alpha...
-pruning rest of moves...: [(5, 5), (5, 1)]
-new_util: 2.0 current best:5.0
-best move is: (2, 1)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:-1.0, best_util: -3.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:-1.0, best_util: -3.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-1.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: 0.0
+beta:inf, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 4): [(2, 2), (5, 5), (1, 5), (1, 3), (5, 3), (4, 6), (4, 2)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+pruning rest of moves...:[(5, 5), (1, 5), (1, 3), (5, 3), (4, 6), (4, 2)]
+beta:0.0, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 4): [(4, 6), (4, 2), (5, 5), (2, 2), (1, 3), (1, 5), (5, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:-1.0, best_util: -4.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:-1.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:-1.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:-1.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:-1.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-5.0
+alpha:-1.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:-1.0, best_util: -1.0
+pruning rest of moves...: [(0, 6)]
+new_util: -1.0 current best:-1.0
+best move is: (3, 4)
 = = = =  = = = = = = = = = = = = = = = = = =
 ==== BEGIN  FN CALL=====
-player 1 at: (5, 5) || player 2 at: (3, 4)
+player 1 at: (2, 2) || player 2 at: (4, 5)
 MOVE (3)
 ====---------------=====
-Player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> moves: [(4, 6), (4, 2), (2, 6), (5, 3), (1, 5), (2, 2)]
-player 1 at: (5, 5) || player 2 at: (4, 6)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (5, 5): [(3, 6), (4, 3)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (4, 6): [(5, 4), (6, 5), (2, 5)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(3, 3), (6, 6), (5, 3), (6, 4), (2, 4)]
+player 1 at: (2, 2) || player 2 at: (3, 3)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 2): [(1, 0), (0, 1), (4, 3), (3, 0), (3, 4), (4, 1), (0, 3)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 3): [(2, 1), (4, 1), (1, 2), (2, 5), (5, 2), (5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(4, 3)]
-new_util: 3.0 current best:-inf
-new best...
-player 1 at: (5, 5) || player 2 at: (4, 2)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (5, 5): [(3, 6), (4, 3)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (4, 2): [(5, 4), (2, 1), (5, 0), (3, 0), (6, 1)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:-inf, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-2.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(4, 3)]
-new_util: 3.0 current best:3.0
-player 1 at: (5, 5) || player 2 at: (2, 6)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (5, 5): [(3, 6), (4, 3)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (2, 6): [(4, 5), (1, 4)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(4, 3)]
-new_util: 3.0 current best:3.0
-player 1 at: (5, 5) || player 2 at: (5, 3)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (5, 5): [(3, 6), (4, 3)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (5, 3): [(4, 5), (4, 1), (6, 1), (3, 2), (6, 5)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(4, 3)]
-new_util: 3.0 current best:3.0
-player 1 at: (5, 5) || player 2 at: (1, 5)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (5, 5): [(3, 6), (4, 3)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (1, 5): [(0, 3)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-2.0
-alpha:5.0, best_util: 2.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(4, 3)]
-new_util: 2.0 current best:3.0
-player 1 at: (5, 5) || player 2 at: (2, 2)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (5, 5): [(3, 6), (4, 3)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (2, 2): [(0, 1), (4, 1), (1, 4), (4, 3), (0, 3), (1, 0), (3, 0)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: -1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:3.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 4.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:3.0, best_util: 4.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+4.0
+alpha:4.0, best_util: 4.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+4.0
+alpha:4.0, best_util: 4.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(4, 3)]
-new_util: 4.0 current best:3.0
-new best...
-best move is: (2, 2)
-= = = =  = = = = = = = = = = = = = = = = = =
-==== BEGIN  FN CALL=====
-player 1 at: (4, 3) || player 2 at: (2, 2)
-MOVE (4)
-====---------------=====
-Player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> moves: [(0, 1), (4, 1), (1, 0), (3, 0), (0, 3), (1, 4)]
-player 1 at: (4, 3) || player 2 at: (0, 1)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (4, 3): [(5, 1), (3, 5), (3, 1), (2, 4), (6, 2), (6, 4)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (0, 1): [(2, 0)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+4.0
+alpha:4.0, best_util: 4.0
+beta:inf, best_util: 4.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 3): [(5, 4), (2, 5), (1, 2), (5, 2), (4, 1), (2, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(3, 5), (3, 1), (2, 4), (6, 2), (6, 4)]
-new_util: 1.0 current best:-inf
-new best...
-player 1 at: (4, 3) || player 2 at: (4, 1)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (4, 3): [(5, 1), (6, 4), (6, 2), (3, 5), (3, 1), (2, 4)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (4, 1): [(3, 3), (6, 0), (5, 3), (6, 2), (2, 0)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+3.0
+alpha:-inf, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-5.0
-alpha:5.0, best_util: 5.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+3.0
+alpha:3.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: 5.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+3.0
+alpha:3.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+alpha:3.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 2.0
-alpha:5.0, best_util: 5.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:3.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 5.0
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 5.0
-pruning rest of moves...: [(6, 4), (6, 2), (3, 5), (3, 1), (2, 4)]
-new_util: 5.0 current best:1.0
-new best...
-player 1 at: (4, 3) || player 2 at: (1, 0)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (4, 3): [(6, 4), (6, 2), (5, 1), (2, 4), (3, 5), (3, 1)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (1, 0): [(3, 1), (0, 2)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(6, 2), (5, 1), (2, 4), (3, 5), (3, 1)]
-new_util: 0.0 current best:5.0
-player 1 at: (4, 3) || player 2 at: (3, 0)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (4, 3): [(6, 2), (2, 4), (3, 5), (6, 4), (5, 1), (3, 1)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (3, 0): [(1, 1), (4, 2), (5, 1)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: -1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+2.0
+alpha:3.0, best_util: 3.0
+beta:4.0, best_util: 3.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 3): [(2, 5), (1, 2), (2, 1), (5, 2), (5, 4), (4, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 -2.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(2, 4), (3, 5), (6, 4), (5, 1), (3, 1)]
-new_util: 1.0 current best:5.0
-player 1 at: (4, 3) || player 2 at: (0, 3)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (4, 3): [(2, 4), (5, 1), (3, 1), (6, 4), (6, 2), (3, 5)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (0, 3): [(1, 1), (1, 5)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:-inf, best_util: -2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:-2.0, best_util: -2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 -3.0
-alpha:5.0, best_util: -3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:-2.0, best_util: -2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
--4.0
-alpha:5.0, best_util: -3.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(5, 1), (3, 1), (6, 4), (6, 2), (3, 5)]
-new_util: -3.0 current best:5.0
-player 1 at: (4, 3) || player 2 at: (1, 4)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (4, 3): [(3, 5), (3, 1), (2, 4), (6, 4), (6, 2), (5, 1)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (1, 4): [(3, 3), (2, 6), (0, 6), (0, 2)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+-2.0
+alpha:-2.0, best_util: -2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:-2.0, best_util: -2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:-2.0, best_util: -2.0
+beta:3.0, best_util: -2.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 3): [(4, 1), (2, 1), (1, 2), (2, 5), (5, 2), (5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+pruning rest of moves...:[(2, 1), (1, 2), (2, 5), (5, 2), (5, 4)]
+beta:-2.0, best_util: -2.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 3): [(2, 5), (5, 2), (4, 1), (1, 2), (5, 4), (2, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+pruning rest of moves...:[(5, 2), (4, 1), (1, 2), (5, 4), (2, 1)]
+beta:-2.0, best_util: -2.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 3): [(2, 5), (2, 1), (1, 2), (5, 2), (5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+pruning rest of moves...:[(2, 1), (1, 2), (5, 2), (5, 4)]
+beta:-2.0, best_util: -2.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 3): [(4, 1), (2, 5), (5, 2), (5, 4), (2, 1), (1, 2)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+pruning rest of moves...:[(2, 5), (5, 2), (5, 4), (2, 1), (1, 2)]
+beta:-2.0, best_util: -2.0
+new_util: -2.0 current best:-inf
+new best...
+player 1 at: (2, 2) || player 2 at: (6, 6)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 2): [(1, 0), (4, 1), (3, 4), (0, 3), (0, 1), (3, 0), (4, 3)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 6): [(5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 4.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:-2.0, best_util: 4.0
+beta:inf, best_util: 4.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 6): [(5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
--2.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--2.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+0.0
+alpha:-2.0, best_util: 0.0
+beta:4.0, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 6): [(5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 -1.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(3, 1), (2, 4), (6, 4), (6, 2), (5, 1)]
-new_util: 4.0 current best:5.0
-best move is: (1, 4)
-= = = =  = = = = = = = = = = = = = = = = = =
-==== BEGIN  FN CALL=====
-player 1 at: (3, 1) || player 2 at: (4, 1)
-MOVE (5)
-====---------------=====
-Player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> moves: [(2, 0), (6, 2), (6, 0), (5, 3), (3, 3)]
-player 1 at: (3, 1) || player 2 at: (2, 0)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (3, 1): [(5, 2), (5, 0), (1, 0), (1, 2)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (2, 0): [(1, 2), (3, 2), (0, 1)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--4.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(5, 0), (1, 0), (1, 2)]
-new_util: 1.0 current best:-inf
-new best...
-player 1 at: (3, 1) || player 2 at: (6, 2)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (3, 1): [(1, 2), (1, 0), (5, 2), (5, 0)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (6, 2): [(5, 4), (5, 0)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--4.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(1, 0), (5, 2), (5, 0)]
-new_util: 0.0 current best:1.0
-player 1 at: (3, 1) || player 2 at: (6, 0)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (3, 1): [(5, 0), (5, 2), (1, 2), (1, 0)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (6, 0): [(5, 2)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(5, 2), (1, 2), (1, 0)]
-new_util: 1.0 current best:1.0
-player 1 at: (3, 1) || player 2 at: (5, 3)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (3, 1): [(5, 0), (1, 0), (5, 2), (1, 2)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (5, 3): [(6, 1), (6, 5), (3, 2), (4, 5)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(1, 0), (5, 2), (1, 2)]
-new_util: 3.0 current best:1.0
-new best...
-player 1 at: (3, 1) || player 2 at: (3, 3)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (3, 1): [(1, 2), (5, 2), (1, 0), (5, 0)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (3, 3): [(2, 5), (5, 4), (5, 2), (2, 1), (4, 5), (1, 4)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: -1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(5, 2), (1, 0), (5, 0)]
-new_util: 1.0 current best:3.0
-best move is: (3, 3)
-= = = =  = = = = = = = = = = = = = = = = = =
-==== BEGIN  FN CALL=====
-player 1 at: (1, 0) || player 2 at: (5, 3)
-MOVE (6)
-====---------------=====
-Player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> moves: [(6, 5), (6, 1), (4, 5), (3, 2)]
-player 1 at: (1, 0) || player 2 at: (6, 5)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (1, 0): [(0, 2)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (6, 5): [(4, 6)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: []
-new_util: 0.0 current best:-inf
-new best...
-player 1 at: (1, 0) || player 2 at: (6, 1)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (1, 0): [(0, 2)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (6, 1): [(4, 0), (4, 2)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:-2.0, best_util: -1.0
+beta:0.0, best_util: -1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 6): [(5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 2.0
-alpha:5.0, best_util: 2.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: []
-new_util: 2.0 current best:0.0
-new best...
-player 1 at: (1, 0) || player 2 at: (4, 5)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (1, 0): [(0, 2)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (4, 5): [(6, 6), (6, 4), (3, 3), (2, 6), (2, 4)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: -1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-4.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+pruning rest of moves...:[]
+beta:-1.0, best_util: -1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 6): [(5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 3.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
+pruning rest of moves...:[]
+beta:-1.0, best_util: -1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 6): [(5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+pruning rest of moves...:[]
+beta:-1.0, best_util: -1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 6): [(5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:-2.0, best_util: -2.0
 pruning rest of moves...: []
-new_util: 4.0 current best:2.0
-new best...
-player 1 at: (1, 0) || player 2 at: (3, 2)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (1, 0): [(0, 2)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (3, 2): [(1, 1), (2, 0), (2, 4), (5, 1), (4, 0)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+new_util: -2.0 current best:-2.0
+player 1 at: (2, 2) || player 2 at: (5, 3)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 2): [(3, 0), (4, 1), (4, 3), (3, 4), (0, 3), (1, 0), (0, 1)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 3): [(6, 1), (4, 1), (3, 4), (6, 5), (3, 2)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 -1.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:-2.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 1.0
-alpha:5.0, best_util: 3.0
+alpha:-1.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:1.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:2.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+4.0
+alpha:2.0, best_util: 4.0
+beta:inf, best_util: 4.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 3): [(3, 2), (6, 1), (3, 4), (6, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+alpha:-2.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:3.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:3.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:3.0, best_util: 3.0
+beta:4.0, best_util: 3.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 3): [(3, 2), (3, 4), (4, 1), (6, 5), (6, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-2.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-5.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-5.0
+alpha:0.0, best_util: 0.0
+beta:3.0, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 3): [(6, 1), (3, 2), (4, 1), (6, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:-2.0, best_util: -3.0
 alpha is smaller, updating alpha...
-pruning rest of moves...: []
-new_util: 3.0 current best:4.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+pruning rest of moves...:[(4, 1), (6, 5)]
+beta:0.0, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 3): [(6, 5), (3, 2), (4, 1), (6, 1), (3, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:-2.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+4.0
+pruning rest of moves...:[(4, 1), (6, 1), (3, 4)]
+beta:0.0, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 3): [(3, 4), (6, 5), (3, 2), (6, 1), (4, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+4.0
+pruning rest of moves...:[(6, 5), (3, 2), (6, 1), (4, 1)]
+beta:0.0, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 3): [(6, 5), (4, 1), (3, 2), (3, 4), (6, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+pruning rest of moves...:[(4, 1), (3, 2), (3, 4), (6, 1)]
+beta:0.0, best_util: 0.0
+new_util: 0.0 current best:-2.0
+new best...
+player 1 at: (2, 2) || player 2 at: (6, 4)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 2): [(1, 0), (0, 1), (4, 1), (4, 3), (0, 3), (3, 4), (3, 0)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 4): [(5, 6), (4, 3), (5, 2)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:0.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+5.0
+alpha:1.0, best_util: 5.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+4.0
+alpha:5.0, best_util: 5.0
+beta:inf, best_util: 5.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 4): [(5, 6), (5, 2), (4, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+alpha:0.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+4.0
+alpha:3.0, best_util: 4.0
+beta:5.0, best_util: 4.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 4): [(5, 2), (4, 3), (5, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:0.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:1.0, best_util: 1.0
+beta:4.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 4): [(5, 2), (5, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: [(0, 3), (3, 4), (3, 0)]
+new_util: -1.0 current best:0.0
+player 1 at: (2, 2) || player 2 at: (2, 4)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 2): [(0, 3), (3, 4), (1, 0), (0, 1), (4, 3), (3, 0), (4, 1)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 4): [(3, 2), (4, 3), (3, 6), (1, 2), (1, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+5.0
+alpha:0.0, best_util: 5.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+4.0
+alpha:5.0, best_util: 5.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:5.0, best_util: 5.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+alpha:5.0, best_util: 5.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:5.0, best_util: 5.0
+beta:inf, best_util: 5.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 4): [(4, 3), (1, 2), (0, 3), (3, 6), (3, 2), (1, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:0.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:1.0, best_util: 1.0
+beta:5.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 4): [(4, 3), (0, 3), (3, 6), (1, 2), (1, 6), (3, 2)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+5.0
+pruning rest of moves...:[(0, 3), (3, 6), (1, 2), (1, 6), (3, 2)]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 4): [(0, 3), (3, 6), (3, 2), (1, 2), (4, 3), (1, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+pruning rest of moves...:[(3, 2), (1, 2), (4, 3), (1, 6)]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 4): [(3, 6), (0, 3), (1, 6), (1, 2), (3, 2)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: -3.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: -3.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: -3.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+pruning rest of moves...:[]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 4): [(4, 3), (3, 6), (3, 2), (1, 6), (1, 2), (0, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+pruning rest of moves...:[(3, 6), (3, 2), (1, 6), (1, 2), (0, 3)]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 4): [(4, 3), (1, 2), (1, 6), (3, 2), (0, 3), (3, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+pruning rest of moves...:[(1, 2), (1, 6), (3, 2), (0, 3), (3, 6)]
+beta:1.0, best_util: 1.0
+new_util: 1.0 current best:0.0
+new best...
+best move is: (2, 4)
+= = = =  = = = = = = = = = = = = = = = = = =
+==== BEGIN  FN CALL=====
+player 1 at: (3, 0) || player 2 at: (2, 4)
+MOVE (4)
+====---------------=====
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(3, 6), (1, 2), (1, 6), (0, 3), (4, 3), (3, 2)]
+player 1 at: (3, 0) || player 2 at: (3, 6)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (3, 0): [(1, 1), (4, 2), (5, 1)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 6): [(5, 5), (4, 4), (1, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:-inf, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+4.0
+alpha:1.0, best_util: 4.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:4.0, best_util: 4.0
+beta:inf, best_util: 4.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 6): [(1, 5), (4, 4), (5, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:-inf, best_util: -4.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-4.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: 0.0
+beta:4.0, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 6): [(4, 4), (1, 5), (5, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+pruning rest of moves...:[(1, 5), (5, 5)]
+beta:0.0, best_util: 0.0
+new_util: 0.0 current best:-inf
+new best...
+player 1 at: (3, 0) || player 2 at: (1, 2)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (3, 0): [(4, 2), (1, 1), (5, 1)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (1, 2): [(0, 4), (0, 0), (3, 3), (3, 1), (2, 0)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: -4.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-5.0
+alpha:0.0, best_util: -4.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: [(1, 1), (5, 1)]
+new_util: -1.0 current best:0.0
+player 1 at: (3, 0) || player 2 at: (1, 6)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (3, 0): [(1, 1), (5, 1), (4, 2)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (1, 6): [(3, 5), (0, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:0.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:1.0, best_util: 1.0
+beta:inf, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (1, 6): [(0, 4), (3, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+pruning rest of moves...: [(4, 2)]
+new_util: 0.0 current best:0.0
+player 1 at: (3, 0) || player 2 at: (0, 3)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (3, 0): [(5, 1), (1, 1), (4, 2)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (0, 3): [(1, 1), (1, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: [(1, 1), (4, 2)]
+new_util: -1.0 current best:0.0
+player 1 at: (3, 0) || player 2 at: (4, 3)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (3, 0): [(4, 2), (5, 1), (1, 1)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 3): [(5, 1), (3, 1), (6, 2), (5, 5), (6, 4), (3, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: -4.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: -2.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: [(5, 1), (1, 1)]
+new_util: -2.0 current best:0.0
+player 1 at: (3, 0) || player 2 at: (3, 2)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (3, 0): [(5, 1), (4, 2), (1, 1)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 2): [(1, 1), (1, 3), (4, 0), (4, 4), (2, 0), (5, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:0.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:2.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+4.0
+alpha:2.0, best_util: 4.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:4.0, best_util: 4.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:4.0, best_util: 4.0
+beta:inf, best_util: 4.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 2): [(4, 4), (5, 3), (5, 1), (4, 0), (1, 1), (2, 0), (1, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-5.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: 0.0
+pruning rest of moves...: [(1, 1)]
+new_util: 0.0 current best:0.0
 best move is: (3, 2)
 = = = =  = = = = = = = = = = = = = = = = = =
 ==== BEGIN  FN CALL=====
-player 1 at: (0, 2) || player 2 at: (4, 5)
-MOVE (7)
+player 1 at: (4, 2) || player 2 at: (3, 6)
+MOVE (5)
 ====---------------=====
-Player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> moves: [(2, 4), (6, 6), (6, 4), (3, 3), (2, 6)]
-player 1 at: (0, 2) || player 2 at: (2, 4)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (0, 2): [(1, 4), (2, 1)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (2, 4): [(0, 3), (1, 2), (3, 2), (3, 6), (1, 6)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--2.0
-alpha:5.0, best_util: -2.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(4, 4), (5, 5), (1, 5)]
+player 1 at: (4, 2) || player 2 at: (4, 4)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (4, 2): [(3, 4), (2, 1), (6, 1), (5, 4), (5, 0), (6, 3)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 4): [(6, 3), (2, 5), (6, 5), (5, 2), (3, 2), (5, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 -3.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:-inf, best_util: -3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
--2.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(2, 1)]
-new_util: 0.0 current best:-inf
-new best...
-player 1 at: (0, 2) || player 2 at: (6, 6)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (0, 2): [(1, 4), (2, 1)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (6, 6): [(5, 4)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(2, 1)]
-new_util: 1.0 current best:0.0
-new best...
-player 1 at: (0, 2) || player 2 at: (6, 4)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (0, 2): [(2, 1), (1, 4)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (6, 4): [(5, 2), (5, 6)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: -1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+0.0
+alpha:-3.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 -3.0
-alpha:5.0, best_util: -1.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(1, 4)]
-new_util: -1.0 current best:1.0
-player 1 at: (0, 2) || player 2 at: (3, 3)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (0, 2): [(1, 4), (2, 1)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (3, 3): [(1, 2), (5, 4), (2, 5), (5, 2), (2, 1)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:0.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:1.0, best_util: 1.0
+beta:inf, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 4): [(6, 3), (3, 2), (6, 5), (2, 5), (5, 2), (5, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:-inf, best_util: -2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 2.0
-alpha:5.0, best_util: 2.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+pruning rest of moves...:[(6, 5), (2, 5), (5, 2), (5, 6)]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 4): [(5, 6), (5, 2), (3, 2), (6, 3), (6, 5), (2, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 0.0
-alpha:5.0, best_util: 2.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 2.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 2.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(2, 1)]
-new_util: 2.0 current best:1.0
-new best...
-player 1 at: (0, 2) || player 2 at: (2, 6)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (0, 2): [(2, 1), (1, 4)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (2, 6): [(1, 4)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--1.0
-alpha:5.0, best_util: -1.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(1, 4)]
-new_util: -1.0 current best:2.0
-best move is: (2, 6)
-= = = =  = = = = = = = = = = = = = = = = = =
-==== BEGIN  FN CALL=====
-player 1 at: (1, 4) || player 2 at: (3, 3)
-MOVE (8)
-====---------------=====
-Player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> moves: [(2, 1), (5, 2), (1, 2), (2, 5), (5, 4)]
-player 1 at: (1, 4) || player 2 at: (2, 1)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (1, 4): [(3, 5), (2, 6), (0, 6)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (2, 1): [(0, 0), (4, 0), (4, 2)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--2.0
-alpha:5.0, best_util: -2.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 0.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(2, 6), (0, 6)]
-new_util: 1.0 current best:-inf
-new best...
-player 1 at: (1, 4) || player 2 at: (5, 2)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (1, 4): [(2, 6), (3, 5), (0, 6)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (5, 2): [(6, 4), (6, 0), (4, 0)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-1.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-0.0
-alpha:5.0, best_util: 1.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:-inf, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 3.0
-alpha:5.0, best_util: 3.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(3, 5), (0, 6)]
-new_util: 3.0 current best:1.0
-new best...
-player 1 at: (1, 4) || player 2 at: (1, 2)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (1, 4): [(2, 6), (3, 5), (0, 6)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (1, 2): [(2, 4), (0, 4), (0, 0), (2, 0)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+pruning rest of moves...:[(3, 2), (6, 3), (6, 5), (2, 5)]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 4): [(2, 5), (5, 2), (3, 2), (5, 6), (6, 3), (6, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-4.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+0.0
+alpha:-inf, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-2.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 1.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+pruning rest of moves...:[(5, 6), (6, 3), (6, 5)]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 4): [(3, 2), (5, 6), (6, 5), (2, 5), (5, 2), (6, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
-2.0
-alpha:5.0, best_util: 4.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(3, 5), (0, 6)]
-new_util: 4.0 current best:3.0
+4.0
+pruning rest of moves...:[(5, 6), (6, 5), (2, 5), (5, 2), (6, 3)]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 4): [(3, 2), (6, 5), (2, 5), (5, 2), (5, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+4.0
+pruning rest of moves...:[(6, 5), (2, 5), (5, 2), (5, 6)]
+beta:1.0, best_util: 1.0
+new_util: 1.0 current best:-inf
 new best...
-player 1 at: (1, 4) || player 2 at: (2, 5)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (1, 4): [(2, 6), (3, 5), (0, 6)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (2, 5): [(0, 6), (4, 6), (0, 4)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+player 1 at: (4, 2) || player 2 at: (5, 5)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (4, 2): [(5, 0), (5, 4), (2, 1), (6, 3), (3, 4), (6, 1)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 5): [(6, 3), (4, 3), (3, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 0.0
-alpha:5.0, best_util: 0.0
+alpha:1.0, best_util: 0.0
 alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+alpha:1.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 2.0
-alpha:5.0, best_util: 2.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-2.0
-alpha:5.0, best_util: 2.0
-alpha is smaller, updating alpha...
-pruning rest of moves...: [(3, 5), (0, 6)]
-new_util: 2.0 current best:4.0
-player 1 at: (1, 4) || player 2 at: (5, 4)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (1, 4): [(3, 5), (2, 6), (0, 6)]
-In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> @ loc (5, 4): [(6, 6), (4, 2), (4, 6), (6, 2)]
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
--2.0
-alpha:5.0, best_util: -2.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-reached depth 0 at minimax_max with time to estimate score!
-2.0
-alpha:5.0, best_util: 2.0
-alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+alpha:3.0, best_util: 3.0
+beta:inf, best_util: 3.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 5): [(4, 3), (3, 4), (6, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 0.0
-alpha:5.0, best_util: 2.0
+alpha:1.0, best_util: 0.0
 alpha is smaller, updating alpha...
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
 reached depth 0 at minimax_max with time to estimate score!
 -1.0
-alpha:5.0, best_util: 2.0
+alpha:1.0, best_util: 0.0
 alpha is smaller, updating alpha...
-pruning rest of moves...: [(2, 6), (0, 6)]
-new_util: 2.0 current best:4.0
-best move is: (5, 4)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:1.0, best_util: 0.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: [(2, 1), (6, 3), (3, 4), (6, 1)]
+new_util: 0.0 current best:1.0
+player 1 at: (4, 2) || player 2 at: (1, 5)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (4, 2): [(6, 1), (5, 4), (6, 3), (2, 1), (5, 0), (3, 4)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (1, 5): [(3, 4), (0, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:1.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:2.0, best_util: 2.0
+beta:inf, best_util: 2.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (1, 5): [(3, 4), (0, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:1.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:1.0, best_util: -1.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: [(6, 3), (2, 1), (5, 0), (3, 4)]
+new_util: -1.0 current best:1.0
+best move is: (1, 5)
 = = = =  = = = = = = = = = = = = = = = = = =
 ==== BEGIN  FN CALL=====
-player 1 at: (2, 6) || player 2 at: (1, 2)
+player 1 at: (2, 1) || player 2 at: (4, 4)
+MOVE (6)
+====---------------=====
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(3, 2), (5, 6), (5, 2), (6, 3), (6, 5), (2, 5)]
+player 1 at: (2, 1) || player 2 at: (3, 2)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 1): [(4, 0), (3, 3), (0, 0), (1, 3)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 2): [(5, 1), (2, 0), (1, 3), (1, 1), (5, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-inf, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:0.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:1.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:1.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:1.0, best_util: 2.0
+beta:inf, best_util: 2.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 2): [(4, 0), (1, 3), (5, 3), (1, 1), (2, 0), (5, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:-inf, best_util: -3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:-3.0, best_util: -2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:-2.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:-1.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:-1.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:-1.0, best_util: -1.0
+beta:2.0, best_util: -1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 2): [(1, 1), (4, 0), (2, 0), (1, 3), (5, 1), (5, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+pruning rest of moves...:[(4, 0), (2, 0), (1, 3), (5, 1), (5, 3)]
+beta:-1.0, best_util: -1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 2): [(5, 3), (5, 1), (1, 1), (4, 0), (2, 0)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+pruning rest of moves...:[(5, 1), (1, 1), (4, 0), (2, 0)]
+beta:-1.0, best_util: -1.0
+new_util: -1.0 current best:-inf
+new best...
+player 1 at: (2, 1) || player 2 at: (5, 6)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 1): [(3, 3), (1, 3), (4, 0), (0, 0)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 6): [(3, 5), (6, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:-1.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:-1.0, best_util: -2.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: [(1, 3), (4, 0), (0, 0)]
+new_util: -2.0 current best:-1.0
+player 1 at: (2, 1) || player 2 at: (5, 2)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 1): [(1, 3), (4, 0), (0, 0), (3, 3)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 2): [(3, 1), (6, 4), (3, 3), (6, 0), (4, 0)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-1.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: 0.0
+beta:inf, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 2): [(3, 3), (6, 4), (6, 0), (3, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+pruning rest of moves...:[(6, 4), (6, 0), (3, 1)]
+beta:0.0, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 2): [(4, 0), (6, 0), (6, 4), (3, 3), (3, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+pruning rest of moves...:[(6, 0), (6, 4), (3, 3), (3, 1)]
+beta:0.0, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 2): [(4, 0), (6, 0), (6, 4), (3, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:-1.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:-1.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:-1.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+pruning rest of moves...:[]
+beta:0.0, best_util: 0.0
+new_util: 0.0 current best:-1.0
+new best...
+player 1 at: (2, 1) || player 2 at: (6, 3)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 1): [(1, 3), (4, 0), (3, 3), (0, 0)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 3): [(5, 5), (5, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: -2.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: [(4, 0), (3, 3), (0, 0)]
+new_util: -2.0 current best:0.0
+player 1 at: (2, 1) || player 2 at: (6, 5)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 1): [(4, 0), (3, 3), (0, 0), (1, 3)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 5): [(4, 6), (5, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:0.0, best_util: 1.0
+beta:inf, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 5): [(4, 6), (5, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: [(0, 0), (1, 3)]
+new_util: -1.0 current best:0.0
+player 1 at: (2, 1) || player 2 at: (2, 5)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 1): [(1, 3), (3, 3), (4, 0), (0, 0)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 5): [(0, 4), (3, 3), (0, 6), (4, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:0.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:1.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:1.0, best_util: 1.0
+beta:inf, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (2, 5): [(1, 3), (0, 4), (4, 6), (0, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: -1.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: [(4, 0), (0, 0)]
+new_util: -1.0 current best:0.0
+best move is: (2, 5)
+= = = =  = = = = = = = = = = = = = = = = = =
+==== BEGIN  FN CALL=====
+player 1 at: (1, 3) || player 2 at: (5, 2)
+MOVE (7)
+====---------------=====
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(6, 4), (3, 3), (3, 1), (6, 0), (4, 0)]
+player 1 at: (1, 3) || player 2 at: (6, 4)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (1, 3): [(2, 5), (0, 1), (3, 4), (3, 2)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 4): [(5, 6), (4, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:-inf, best_util: -3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:-3.0, best_util: 1.0
+beta:inf, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 4): [(5, 6), (4, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-inf, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+4.0
+pruning rest of moves...:[]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 4): [(4, 3), (5, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+pruning rest of moves...:[(5, 6)]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 4): [(4, 3), (5, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-inf, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: 0.0
+beta:1.0, best_util: 0.0
+new_util: 0.0 current best:-inf
+new best...
+player 1 at: (1, 3) || player 2 at: (3, 3)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (1, 3): [(3, 4), (2, 5), (0, 1), (3, 2)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 3): [(1, 2), (4, 1), (5, 4), (2, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: 0.0
+pruning rest of moves...: [(2, 5), (0, 1), (3, 2)]
+new_util: 0.0 current best:0.0
+player 1 at: (1, 3) || player 2 at: (3, 1)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (1, 3): [(2, 5), (0, 1), (3, 4), (3, 2)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 1): [(1, 0), (4, 3), (1, 2), (5, 0)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: -4.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:0.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:1.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:1.0, best_util: 1.0
+beta:inf, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 1): [(5, 0), (1, 2), (4, 3), (1, 0)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+pruning rest of moves...:[(4, 3), (1, 0)]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 1): [(1, 2), (1, 0), (5, 0), (4, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+pruning rest of moves...:[]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 1): [(4, 3), (5, 0), (1, 2), (1, 0)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-5.0
+alpha:0.0, best_util: 0.0
+pruning rest of moves...: []
+new_util: 0.0 current best:0.0
+player 1 at: (1, 3) || player 2 at: (6, 0)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (1, 3): [(3, 4), (2, 5), (0, 1), (3, 2)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 0): [(4, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+pruning rest of moves...: [(2, 5), (0, 1), (3, 2)]
+new_util: 0.0 current best:0.0
+player 1 at: (1, 3) || player 2 at: (4, 0)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (1, 3): [(3, 4), (0, 1), (3, 2), (2, 5)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 0): [(6, 1), (3, 2)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: -3.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+pruning rest of moves...: [(0, 1), (3, 2), (2, 5)]
+new_util: 0.0 current best:0.0
+best move is: (4, 0)
+= = = =  = = = = = = = = = = = = = = = = = =
+==== BEGIN  FN CALL=====
+player 1 at: (3, 2) || player 2 at: (6, 4)
+MOVE (8)
+====---------------=====
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(4, 3), (5, 6)]
+player 1 at: (3, 2) || player 2 at: (4, 3)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (3, 2): [(4, 0), (1, 1), (2, 0), (5, 3), (5, 1)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 3): [(5, 5), (5, 1), (3, 5), (3, 1), (6, 2)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:-inf, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:1.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:1.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:2.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:2.0, best_util: 2.0
+beta:inf, best_util: 2.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 3): [(3, 5), (5, 1), (3, 1), (6, 2), (5, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+pruning rest of moves...:[(5, 1), (3, 1), (6, 2), (5, 5)]
+beta:2.0, best_util: 2.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 3): [(5, 5), (6, 2), (3, 1), (3, 5), (5, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:-inf, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-1.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: 0.0
+beta:2.0, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 3): [(5, 5), (5, 1), (3, 5), (6, 2), (3, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:-inf, best_util: -2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:-2.0, best_util: -2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:-2.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:-1.0, best_util: -1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:-1.0, best_util: -1.0
+beta:0.0, best_util: -1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 3): [(6, 2), (3, 5), (5, 5), (3, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+pruning rest of moves...:[(3, 5), (5, 5), (3, 1)]
+beta:-1.0, best_util: -1.0
+new_util: -1.0 current best:-inf
+new best...
+player 1 at: (3, 2) || player 2 at: (5, 6)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (3, 2): [(2, 0), (5, 1), (5, 3), (1, 1), (4, 0)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 6): [(3, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-1.0, best_util: 0.0
+beta:inf, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 6): [(3, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+pruning rest of moves...:[]
+beta:0.0, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 6): [(3, 5)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:-1.0, best_util: -1.0
+pruning rest of moves...: [(1, 1), (4, 0)]
+new_util: -1.0 current best:-1.0
+best move is: (5, 6)
+= = = =  = = = = = = = = = = = = = = = = = =
+==== BEGIN  FN CALL=====
+player 1 at: (5, 3) || player 2 at: (4, 3)
 MOVE (9)
 ====---------------=====
-Player <game_agent.AlphaBetaPlayer object at 0x0000000001501898> moves: [(2, 4), (0, 0), (2, 0), (0, 4)]
-player 1 at: (2, 6) || player 2 at: (2, 4)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (2, 6): []
-<__main__.RandomPlayer object at 0x0000000001501710> has no more moves
-
-new_util: -inf current best:-inf
-player 1 at: (2, 6) || player 2 at: (0, 0)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (2, 6): []
-<__main__.RandomPlayer object at 0x0000000001501710> has no more moves
-
-new_util: -inf current best:-inf
-player 1 at: (2, 6) || player 2 at: (2, 0)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (2, 6): []
-<__main__.RandomPlayer object at 0x0000000001501710> has no more moves
-
-new_util: -inf current best:-inf
-player 1 at: (2, 6) || player 2 at: (0, 4)
-In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x0000000001501898>
-legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x0000000001501710> @ loc (2, 6): []
-<__main__.RandomPlayer object at 0x0000000001501710> has no more moves
-
-new_util: -inf current best:-inf
-best move is: (0, 4)
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(3, 5), (5, 5), (5, 1), (6, 2), (3, 1)]
+player 1 at: (5, 3) || player 2 at: (3, 5)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (5, 3): [(6, 1), (3, 4), (6, 5), (4, 1)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 5): [(1, 6), (5, 4), (5, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-inf, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+alpha:0.0, best_util: 3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:3.0, best_util: 3.0
+beta:inf, best_util: 3.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 5): [(5, 4), (1, 6), (5, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:-inf, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:1.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:1.0, best_util: 1.0
+beta:3.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 5): [(1, 6), (5, 6), (5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-inf, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+pruning rest of moves...:[]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 5): [(1, 6), (5, 4), (5, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:-inf, best_util: -3.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-3.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-4.0
+alpha:0.0, best_util: 0.0
+beta:1.0, best_util: 0.0
+new_util: 0.0 current best:-inf
+new best...
+player 1 at: (5, 3) || player 2 at: (5, 5)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (5, 3): [(4, 1), (3, 4), (6, 1), (6, 5)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 5): [(3, 4), (6, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:0.0, best_util: -2.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: [(3, 4), (6, 1), (6, 5)]
+new_util: -2.0 current best:0.0
+player 1 at: (5, 3) || player 2 at: (5, 1)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (5, 3): [(6, 1), (3, 4), (6, 5), (4, 1)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 1): [(6, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+pruning rest of moves...: [(3, 4), (6, 5), (4, 1)]
+new_util: 0.0 current best:0.0
+player 1 at: (5, 3) || player 2 at: (6, 2)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (5, 3): [(3, 4), (4, 1), (6, 5), (6, 1)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 2): [(4, 1), (5, 0), (5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:0.0, best_util: 1.0
+beta:inf, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 2): [(5, 0), (5, 4)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+pruning rest of moves...:[]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 2): [(4, 1), (5, 4), (5, 0)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+pruning rest of moves...:[(5, 4), (5, 0)]
+beta:1.0, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 2): [(5, 4), (4, 1), (5, 0)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+pruning rest of moves...:[(4, 1), (5, 0)]
+beta:1.0, best_util: 1.0
+new_util: 1.0 current best:0.0
+new best...
+player 1 at: (5, 3) || player 2 at: (3, 1)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (5, 3): [(6, 1), (3, 4), (6, 5), (4, 1)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 1): [(5, 0), (1, 0), (1, 2)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:1.0, best_util: 0.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:1.0, best_util: 0.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+3.0
+alpha:1.0, best_util: 3.0
+beta:inf, best_util: 3.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 1): [(1, 2), (1, 0), (5, 0)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:1.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:1.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:1.0, best_util: 1.0
+pruning rest of moves...: [(6, 5), (4, 1)]
+new_util: 1.0 current best:1.0
+best move is: (3, 1)
+= = = =  = = = = = = = = = = = = = = = = = =
+==== BEGIN  FN CALL=====
+player 1 at: (6, 5) || player 2 at: (6, 2)
+MOVE (10)
+====---------------=====
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(5, 4), (4, 1), (5, 0)]
+player 1 at: (6, 5) || player 2 at: (5, 4)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (6, 5): [(4, 6)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 4): [(3, 5), (3, 3), (6, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-inf, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:0.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:1.0, best_util: 1.0
+beta:inf, best_util: 1.0
+new_util: 1.0 current best:-inf
+new best...
+player 1 at: (6, 5) || player 2 at: (4, 1)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (6, 5): [(4, 6)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 1): [(6, 0), (2, 0), (3, 3)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-3.0
+alpha:1.0, best_util: -3.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:1.0, best_util: -1.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:1.0, best_util: 0.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: []
+new_util: 0.0 current best:1.0
+player 1 at: (6, 5) || player 2 at: (5, 0)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (6, 5): [(4, 6)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (5, 0): [(3, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:1.0, best_util: -1.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: []
+new_util: -1.0 current best:1.0
+best move is: (5, 0)
+= = = =  = = = = = = = = = = = = = = = = = =
+==== BEGIN  FN CALL=====
+player 1 at: (4, 6) || player 2 at: (5, 4)
+MOVE (11)
+====---------------=====
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(3, 3), (3, 5), (6, 6)]
+player 1 at: (4, 6) || player 2 at: (3, 3)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (4, 6): [(3, 4), (2, 5)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 3): [(2, 5), (1, 2), (4, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-inf, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+alpha:0.0, best_util: 2.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:2.0, best_util: 2.0
+beta:inf, best_util: 2.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 3): [(4, 1), (1, 2)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-inf, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+pruning rest of moves...:[]
+beta:2.0, best_util: 2.0
+new_util: 2.0 current best:-inf
+new best...
+player 1 at: (4, 6) || player 2 at: (3, 5)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (4, 6): [(3, 4), (2, 5)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (3, 5): [(5, 6), (1, 6)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:2.0, best_util: -2.0
+alpha is smaller, updating alpha...
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:2.0, best_util: -1.0
+alpha is smaller, updating alpha...
+pruning rest of moves...: [(2, 5)]
+new_util: -1.0 current best:2.0
+player 1 at: (4, 6) || player 2 at: (6, 6)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (4, 6): [(3, 4), (2, 5)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (6, 6): []
+<game_agent.AlphaBetaPlayer object at 0x00000000014E1898> ran out of moves. Utility is:-inf
+pruning rest of moves...: [(2, 5)]
+new_util: -inf current best:2.0
+best move is: (6, 6)
+= = = =  = = = = = = = = = = = = = = = = = =
+==== BEGIN  FN CALL=====
+player 1 at: (2, 5) || player 2 at: (3, 3)
+MOVE (12)
+====---------------=====
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(4, 1), (1, 2)]
+player 1 at: (2, 5) || player 2 at: (4, 1)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 5): [(0, 4), (0, 6)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 1): [(2, 0), (6, 0)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+0.0
+alpha:-inf, best_util: 0.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-2.0
+alpha:0.0, best_util: 0.0
+beta:inf, best_util: 0.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (4, 1): [(2, 0), (6, 0)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+pruning rest of moves...:[(6, 0)]
+beta:0.0, best_util: 0.0
+new_util: 0.0 current best:-inf
+new best...
+player 1 at: (2, 5) || player 2 at: (1, 2)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (2, 5): [(0, 4), (0, 6)]
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (1, 2): [(2, 0), (0, 0), (3, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:0.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+-1.0
+alpha:1.0, best_util: 1.0
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+1.0
+alpha:1.0, best_util: 1.0
+beta:inf, best_util: 1.0
+In alphabeta_max, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_max of player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> @ loc (1, 2): [(2, 0), (0, 4), (0, 0), (3, 1)]
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+reached depth 0 at minimax_max with time to estimate score!
+2.0
+pruning rest of moves...:[(0, 4), (0, 0), (3, 1)]
+beta:1.0, best_util: 1.0
+new_util: 1.0 current best:0.0
+new best...
+best move is: (1, 2)
+= = = =  = = = = = = = = = = = = = = = = = =
+==== BEGIN  FN CALL=====
+player 1 at: (0, 6) || player 2 at: (1, 2)
+MOVE (13)
+====---------------=====
+Player <game_agent.AlphaBetaPlayer object at 0x00000000014E1898> moves: [(0, 0), (2, 0), (0, 4), (3, 1)]
+player 1 at: (0, 6) || player 2 at: (0, 0)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (0, 6): []
+<game_agent.AlphaBetaPlayer object at 0x00000000014E1898> has no more moves Utility is:inf
+new_util: inf current best:-inf
+new best...
+player 1 at: (0, 6) || player 2 at: (2, 0)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (0, 6): []
+<game_agent.AlphaBetaPlayer object at 0x00000000014E1898> has no more moves Utility is:inf
+new_util: inf current best:inf
+player 1 at: (0, 6) || player 2 at: (0, 4)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (0, 6): []
+<game_agent.AlphaBetaPlayer object at 0x00000000014E1898> has no more moves Utility is:inf
+new_util: inf current best:inf
+player 1 at: (0, 6) || player 2 at: (3, 1)
+In alphabeta_min, player is: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+legal moves in alphabeta_min of player <__main__.RandomPlayer object at 0x00000000014E1710> @ loc (0, 6): []
+<game_agent.AlphaBetaPlayer object at 0x00000000014E1898> has no more moves Utility is:inf
+new_util: inf current best:inf
+best move is: (3, 1)
 = = = =  = = = = = = = = = = = = = = = = = =
 
-Winner: <__main__.RandomPlayer object at 0x0000000001501710>
-Outcome: forfeit
+Winner: <game_agent.AlphaBetaPlayer object at 0x00000000014E1898>
+Outcome: illegal move
      0   1   2   3   4   5   6
-0  |   |   | - |   |   | - |   | 
-1  | - |   | 2 | - | - |   |   | 
-2  |   |   | - | - |   |   | 1 | 
-3  |   | - |   | - | - |   |   | 
-4  |   | - |   | - | - | - |   | 
-5  |   |   |   | - |   | - |   | 
-6  |   |   |   | - |   |   |   | 
+0  | 2 |   | - |   |   | - | 1 | 
+1  |   |   | - | - | - |   |   | 
+2  |   | - | - | - | - | - | - | 
+3  | - |   | - | - |   |   | - | 
+4  |   |   | - | - | - | - | - | 
+5  |   |   | - | - | - |   |   | 
+6  |   |   | - |   | - | - |   | 
 
 Move history:
-[[4, 4], [1, 3], [6, 3], [3, 4], [5, 5], [2, 2], [4, 3], [4, 1], [3, 1], [5, 3], [1, 0], [4, 5], [0, 2], [3, 3], [1, 4], [1, 2], [2, 6]]
+[[0, 2], [2, 6], [1, 4], [4, 5], [2, 2], [2, 4], [3, 0], [3, 6], [4, 2], [4, 4], [2, 1], [5, 2], [1, 3], [6, 4], [3, 2], [4, 3], [5, 3], [6, 2], [6, 5], [5, 4], [4, 6], [3, 3], [2, 5], [1, 2], [0, 6], [0, 0]]
+My player won: True
