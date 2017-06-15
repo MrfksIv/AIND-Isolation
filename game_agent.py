@@ -37,7 +37,9 @@ def custom_score(game, player):
     # TODO: finish this function!
     # raise NotImplementedError
     opponent = game.get_opponent(player)
-    return float(len(game.get_legal_moves(player)) - len(game.get_legal_moves(opponent)))
+    util = float(len(game.get_legal_moves(player)) - len(game.get_legal_moves(opponent)))
+    return util
+
 
 def custom_score_2(game, player):
     """Calculate the heuristic value of a game state from the point of view
@@ -214,13 +216,15 @@ class MinimaxPlayer(IsolationPlayer):
         """
         self.move_index += 1
         opponent = game.get_opponent(game.active_player)
-        # print("==== BEGIN  FN CALL=====")
-        # print("player 1 at: {} || player 2 at: {}"
-        #         .format(game.get_player_location(opponent),game.get_player_location(game.active_player)))
-        # print("MOVE ({})".format(self.move_index))
-        # print("====---------------=====") 
-        
+        print("==== BEGIN  FN CALL=====")
+        print("player 1 at: {} || player 2 at: {}"
+                .format(game.get_player_location(opponent),game.get_player_location(game.active_player)))
+        print("MOVE ({})".format(self.move_index))
+        print("====---------------=====")
+
         best_move = (-1, -1)
+        best_util = float("-inf")
+
         if self.time_left() < self.TIMER_THRESHOLD:
             # print("out of time... Available best move: {}".format(best_move))
             return best_move
@@ -228,88 +232,100 @@ class MinimaxPlayer(IsolationPlayer):
         # print("minimax called by {}".format(game.active_player))
 
         possible_moves = game.get_legal_moves()
+        print("Player {} moves: {}".format(game.active_player, possible_moves))
+
         if len(possible_moves) == 0:
-            # print("No moves left!")
             return best_move
 
-        # print('Possible Moves at depth ({}):'.format(depth))
-        # print(possible_moves)
+        for move in possible_moves:
+            forecasted_game = game.forecast_move(move)
+            print("player 1 at: {} || player 2 at: {}"
+                    .format(forecasted_game.get_player_location(opponent), forecasted_game.get_player_location(forecasted_game.inactive_player)))
+            new_util = self._minimax_min(forecasted_game, depth-1, game.active_player)
 
-        possible_scores = [self.score(game.forecast_move(move), game.active_player) for move in possible_moves]
-        # print('Possible Scores:')
-        # print(possible_scores)
+            if new_util == float("inf"):
+                print("found winning move...")
+                return best_move
 
-        #
-        best_move_idx = possible_scores.index(max(possible_scores))
-        best_move = possible_moves[best_move_idx]
-        # print('Best Move:')
-        # print(best_move)
+            print("new_util: {} current best:{}".format(new_util, best_util))
+            if new_util > best_util:
+                print("new best...")
+                best_util = new_util
+                best_move = move
 
-        if depth >= 0 :
-            for move in possible_moves:
-            
-                # print('Now in move: {}'.format(move))
-                forecasted_game = game.forecast_move(move)
-                
-                # print("player 1 at: {} || player 2 at: {}"
-                #     .format(forecasted_game.get_player_location(opponent),forecasted_game.get_player_location(game.active_player)))
-                
-                possible_opponent_moves = forecasted_game.get_legal_moves(opponent)
-
-                for opponent_move in possible_opponent_moves: 
-                    forecasted_game_2 = forecasted_game.forecast_move(opponent_move)
-
-                if len(possible_opponent_moves) == 0:
-                    # print("opponent ran out of moves!!")
-                    return move
-
-                # print('Opponent Possibilities to move:')
-                # print(possible_opponent_moves)
-                if self.time_left() > self.TIMER_THRESHOLD:
-                    possible_opponent_scores = [self.score(forecasted_game.forecast_move(move), game.active_player)
-                        for move in possible_opponent_moves]
-
-
-
-                    # print(possible_opponent_moves)
-                    # print('Possible opponent scores:')
-                    # print(possible_opponent_scores)
-
-                    best_opponent_move_idx = possible_opponent_scores.index(min(possible_opponent_scores))
-                    best_opponent_move = possible_opponent_moves[best_opponent_move_idx]
-
-                    # print('Opponent Chooses:')
-                    # print(best_opponent_move)
-
-                    f_game = forecasted_game.forecast_move(best_opponent_move)
-                    self.minimax(f_game, depth-1)
-
-                else:
-                    return best_move
-            
+        print("best move is: {}".format(move))
+        print("= = = =  = = = = = = = = = = = = = = = = = =")
         return best_move
 
 
-    def _minimax_max(self, game):
+    def _minimax_max(self, game, depth, player):
+        # print("_minimax_max, the player passed is: {} and active player is : {}".format(player, game.active_player))
+        best_util = float("-inf")
+
+        if self.time_left() < self.TIMER_THRESHOLD:
+            return best_util
+
+        if depth == 0 and self.time_left() > self.TIMER_THRESHOLD:
+            print("reached depth 0 at minimax_max with time to estimate score!")
+            t = self.score(game, player)
+            print(t)
+            return t
+        elif depth == 0 and self.time_left() <= self.TIMER_THRESHOLD:
+            print("reached depth 0 at minimax_max BUT NO TIME to estimate score!")
+            print(best_util)
+            return best_util
+
         legal_moves = game.get_legal_moves()
+        print("legal moves in _minimax_max of player {} @ loc {}: {}".format(
+            game.active_player, game.get_player_location(game.active_player),legal_moves ))
 
         if len(legal_moves) == 0:
-            return game.utility()
+            return game.utility(player)
 
         for move in legal_moves:
             f_game = game.forecast_move(move)
-            self._minimax_min(f_game)
+            move_util = self._minimax_min(f_game, depth - 1, player)
+            if move_util > best_util:
+                best_util = move_util
 
+        return best_util
 
-    def _minimax_min(self, game):
+    def _minimax_min(self, game, depth, player):
+        # print("_minimax_min, the player passed is: {} and active player is : {}".format(player, game.active_player))
+        opponent = game.get_opponent(player)
+
+        # print("At depth {},  _minimax_min player is: {}".format(depth, player))
+        # print("active player is: {}".format(game.active_player))
+        best_util = float("inf")
+
+        if self.time_left() < self.TIMER_THRESHOLD:
+            print("no time left - returning best util")
+            return best_util
+
+        if depth == 0 and self.time_left() > self.TIMER_THRESHOLD:
+            print("reached depth 0 at minimax_min with time to estimate score!")
+            t = self.score(game, player)
+            print(t)
+            return t
+        elif depth == 0 and self.time_left() <= self.TIMER_THRESHOLD:
+            print("reached depth 0 at minimax_min BUT NO TIME to estimate score!")
+            print(best_util)
+            return best_util
+
         legal_moves = game.get_legal_moves()
+        print("legal moves in _minimax_min of player {} @ loc {}: {}".format(
+            game.active_player, game.get_player_location(game.active_player),legal_moves ))
 
         if len(legal_moves) == 0:
-            return game.utility()
+            return game.utility(player)
 
         for move in legal_moves:
             f_game = game.forecast_move(move)
-            self._minimax_min(f_game)
+            move_util = self._minimax_max(f_game, depth - 1, player)
+            if move_util < best_util:
+                best_util = move_util
+
+        return best_util
 
 
 
@@ -321,6 +337,8 @@ class AlphaBetaPlayer(IsolationPlayer):
     search with alpha-beta pruning. You must finish and test this player to
     make sure it returns a good move before the search time limit expires.
     """
+    global_alpha = float("-inf")
+    global_beta=float("inf")
 
     def get_move(self, game, time_left):
         """Search for the best move from the available legal moves and return a
@@ -354,8 +372,23 @@ class AlphaBetaPlayer(IsolationPlayer):
         """
         self.time_left = time_left
 
-        # TODO: finish this function!
-        return game.get_legal_moves()
+        # Initialize the best move so that this function returns something
+        # in case the search fails due to timeout
+        best_move = (-1, -1)
+
+        try:
+            # The try/except block will automatically catch the exception
+            # raised when the timer is about to expire.
+            return self.alphabeta(game, self.search_depth, self.global_alpha, self.global_beta)
+
+        except SearchTimeout:
+            pass  # Handle any actions required after timeout as needed
+
+        # Return the best move from the last completed search iteration
+        return best_move
+
+    global_alpha = float("-inf")
+    global_beta=float("inf")
 
     def alphabeta(self, game, depth, alpha=float("-inf"), beta=float("inf")):
         """Implement depth-limited minimax search with alpha-beta pruning as
@@ -405,5 +438,125 @@ class AlphaBetaPlayer(IsolationPlayer):
         if self.time_left() < self.TIMER_THRESHOLD:
             raise SearchTimeout()
 
+        self.move_index += 1
+        opponent = game.get_opponent(game.active_player)
+        print("==== BEGIN  FN CALL=====")
+        print("player 1 at: {} || player 2 at: {}"
+                .format(game.get_player_location(opponent),game.get_player_location(game.active_player)))
+        print("MOVE ({})".format(self.move_index))
+        print("====---------------=====")
+
+        best_move = (-1, -1)
+        best_util = float("-inf")
+
+        if self.time_left() < self.TIMER_THRESHOLD:
+            # print("out of time... Available best move: {}".format(best_move))
+            return best_move
+
+        # print("minimax called by {}".format(game.active_player))
+
+        possible_moves = game.get_legal_moves()
+        print("Player {} moves: {}".format(game.active_player, possible_moves))
+
+        if len(possible_moves) == 0:
+            return best_move
+
+
+        for move in possible_moves:
+            forecasted_game = game.forecast_move(move)
+            print("player 1 at: {} || player 2 at: {}"
+                    .format(forecasted_game.get_player_location(opponent), forecasted_game.get_player_location(forecasted_game.inactive_player)))
+            new_util = self.alphabeta_min(forecasted_game,
+                depth-1, alpha, beta, game.active_player)
+
+
+            print("new_util: {} current best:{}".format(new_util, best_util))
+            if new_util > best_util:
+                print("new best...")
+                best_util = new_util
+                best_move = move
+
+            # if new_util >= self.global_beta:
+            #     print("pruning rest of moves at the top...:{}".format(possible_moves[possible_moves.index(move)+1:]))
+            #     return best_move
+
+            alpha = max(alpha, best_util)
+        print("best move is: {}".format(move))
+        print("= = = =  = = = = = = = = = = = = = = = = = =")
+        return best_move
+
         # TODO: finish this function!
-        raise NotImplementedError
+        # return game.get_legal_moves()[0]
+
+    def alphabeta_max(self, game, depth, alpha, beta, player):
+        print("In alphabeta_max, player is: {}".format(player))
+        best_util = float("-inf")
+        if self.time_left() < self.TIMER_THRESHOLD:
+            raise SearchTimeout()
+
+        if depth == 0:
+            print("reached depth 0 at minimax_max with time to estimate score!")
+            t = self.score(game, player)
+            print(t)
+            return t
+
+        legal_moves = game.get_legal_moves()
+        print("legal moves in alphabeta_max of player {} @ loc {}: {}".format(
+            game.active_player, game.get_player_location(game.active_player),legal_moves ))
+
+        if len(legal_moves) == 0:
+            print("{} ran out of moves. Utility is:{}".format(player, game.utility(player)))
+            return game.utility(player)
+
+        for move in legal_moves:
+            forecasted_game = game.forecast_move(move)
+            move_util = self.alphabeta_min(forecasted_game, depth-1, alpha, beta, player)
+            if move_util > best_util:
+                best_util = move_util
+            if move_util >= beta:
+                print("pruning rest of moves...:{}".format(legal_moves[legal_moves.index(move)+1:]))
+                return move_util
+
+            print("alpha:{}, best_util: {}".format(alpha, best_util))
+            if alpha > best_util:
+                print("alpha is smaller, updating alpha...")
+            alpha = max(alpha, best_util)
+
+        return best_util
+
+
+    def alphabeta_min(self, game, depth, alpha, beta, player):
+        print("In alphabeta_min, player is: {}".format(player))
+        best_util = float("inf")
+        if self.time_left() < self.TIMER_THRESHOLD:
+            raise SearchTimeout()
+
+        if depth == 0:
+            print("reached depth 0 at minimax_max with time to estimate score!")
+            t = self.score(game, player)
+            print(t)
+            return t
+
+        legal_moves = game.get_legal_moves()
+        print("legal moves in alphabeta_min of player {} @ loc {}: {}".format(
+            game.active_player, game.get_player_location(game.active_player),legal_moves ))
+
+        if len(legal_moves) == 0:
+            print("{} has no more moves".format(game.active_player))
+            return game.utility(game.active_player)
+
+        for move in legal_moves:
+            forecasted_game = game.forecast_move(move)
+            move_util = self.alphabeta_max(forecasted_game, depth-1, alpha, beta, player)
+            if move_util < best_util:
+                best_util = move_util
+            if move_util <= alpha:
+                print("pruning rest of moves...: {}".format(legal_moves[legal_moves.index(move)+1:]))
+                return move_util
+
+            print("beta:{}, best_util: {}".format(beta, best_util))
+            if beta < best_util:
+                print("beta is smaller, updating beta...")
+            beta = min(beta, best_util)
+
+        return best_util
