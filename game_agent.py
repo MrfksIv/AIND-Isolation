@@ -227,7 +227,7 @@ class MinimaxPlayer(IsolationPlayer):
 
         if self.time_left() < self.TIMER_THRESHOLD:
             # print("out of time... Available best move: {}".format(best_move))
-            return best_move
+            raise SearchTimeout()
 
         # print("minimax called by {}".format(game.active_player))
 
@@ -263,18 +263,14 @@ class MinimaxPlayer(IsolationPlayer):
         best_util = float("-inf")
 
         if self.time_left() < self.TIMER_THRESHOLD:
-            return best_util
+            raise SearchTimeout()
 
-        if depth == 0 and self.time_left() > self.TIMER_THRESHOLD:
+        if depth == 0:
             print("reached depth 0 at minimax_max with time to estimate score!")
             t = self.score(game, player)
             print(t)
             return t
-        elif depth == 0 and self.time_left() <= self.TIMER_THRESHOLD:
-            print("reached depth 0 at minimax_max BUT NO TIME to estimate score!")
-            print(best_util)
-            return best_util
-
+   
         legal_moves = game.get_legal_moves()
         print("legal moves in _minimax_max of player {} @ loc {}: {}".format(
             game.active_player, game.get_player_location(game.active_player),legal_moves ))
@@ -299,19 +295,14 @@ class MinimaxPlayer(IsolationPlayer):
         best_util = float("inf")
 
         if self.time_left() < self.TIMER_THRESHOLD:
-            print("no time left - returning best util")
-            return best_util
+            raise SearchTimeout()
 
-        if depth == 0 and self.time_left() > self.TIMER_THRESHOLD:
+        if depth == 0:
             print("reached depth 0 at minimax_min with time to estimate score!")
             t = self.score(game, player)
             print(t)
             return t
-        elif depth == 0 and self.time_left() <= self.TIMER_THRESHOLD:
-            print("reached depth 0 at minimax_min BUT NO TIME to estimate score!")
-            print(best_util)
-            return best_util
-
+    
         legal_moves = game.get_legal_moves()
         print("legal moves in _minimax_min of player {} @ loc {}: {}".format(
             game.active_player, game.get_player_location(game.active_player),legal_moves ))
@@ -376,19 +367,24 @@ class AlphaBetaPlayer(IsolationPlayer):
         # in case the search fails due to timeout
         best_move = (-1, -1)
 
-        try:
+        
             # The try/except block will automatically catch the exception
             # raised when the timer is about to expire.
-            return self.alphabeta(game, self.search_depth, self.global_alpha, self.global_beta)
-
+        try:
+            depth = 1
+            while True:
+                best_move = self.alphabeta(game, depth, self.global_alpha, self.global_beta)
+                print("Best move in get_move at depth{}: {}".format(depth, best_move))
+                depth += 1
         except SearchTimeout:
-            pass  # Handle any actions required after timeout as needed
+            pass
+        # Handle any actions required after timeout as needed
 
         # Return the best move from the last completed search iteration
         return best_move
 
-    global_alpha = float("-inf")
-    global_beta=float("inf")
+    # global_alpha = float("-inf")
+    # global_beta=float("inf")
 
     def alphabeta(self, game, depth, alpha=float("-inf"), beta=float("inf")):
         """Implement depth-limited minimax search with alpha-beta pruning as
@@ -491,6 +487,7 @@ class AlphaBetaPlayer(IsolationPlayer):
     def alphabeta_max(self, game, depth, alpha, beta, player):
         print("In alphabeta_max, player is: {}".format(player))
         best_util = float("-inf")
+
         if self.time_left() < self.TIMER_THRESHOLD:
             raise SearchTimeout()
 
